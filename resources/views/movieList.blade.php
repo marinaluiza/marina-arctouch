@@ -1,6 +1,7 @@
 
 
 <h2>Movies Upcoming</h2>
+
 <div id="movieList">
     <div class="list-group">
         @foreach($result['results'] as $movie)
@@ -26,19 +27,9 @@
     </div>
     <nav aria-label="Page navigation">
         <ul class="pagination">
-            <li>
-                <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
             @for($i = 1; $i <= $result['total_pages']; $i++)
                 <li><a onclick="upcomingMovies({{$i}})" href="#">{{$i}}</a></li>
             @endfor
-            <li>
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
         </ul>
     </nav>
 
